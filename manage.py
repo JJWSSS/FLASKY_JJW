@@ -66,4 +66,7 @@ def deploy():
     User.add_self_follows()
 
 if __name__ == '__main__':
+    print(os.environ.get('MAIL_PASSWORD'))
     manager.run()
+
+

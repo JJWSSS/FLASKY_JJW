@@ -24,7 +24,7 @@ def index():
             form.validate_on_submit():
         post = Post(body=form.body.data,
                     author=current_user._get_current_object())
-        db.session.add()
+        db.session.add(post)
         return redirect(url_for('.index'))
     page = request.args.get('page', 1, type=int)
     show_followed = False
